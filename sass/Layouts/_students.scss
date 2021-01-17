@@ -1,0 +1,41 @@
+.students__content {
+    width: 80%;
+    margin: 0 auto;
+    h3{
+        @include styleText($color-black-light,$fs-2 - 1, 400);
+        padding-top: $pd-1 +6 ;
+    }
+    .students__tab {
+        .card-title {
+            @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+        .card-text {
+            @include styleText($color-gray-4, $fs-1 - 1, $fw-normal);
+        }
+        .courses__tab__item__rating {
+            .courses__tab__item__rating__star {
+                display: inline;
+                @include styleText($color-yellow, $fs-1, $fw-normal);
+                margin: $mg-0;
+            }
+            .courses__rating {
+                @include styleText($color-black-light, $fs-1, $fw-bold);
+                margin: $mg-0;
+            }
+
+            .courses__view {
+                @include styleText($color-black-0, $fs-1, $fw-normal);
+            }
+        }
+        .courses__tab__item__rating__price {
+            text-align: right;
+            .old-price {
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+                text-decoration: line-through;
+            }
+            .new-price {
+                @include styleText($color-black-0, $fs-2 - 2, $fw-bold);
+            }
+        }
+    }
+}

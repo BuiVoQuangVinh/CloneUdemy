@@ -1,0 +1,36 @@
+//Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+
+//Vendor
+//code của thư viện
+
+
+//Base
+@import './Base/reset';
+@import './Base/customize';
+
+
+//Components
+@import './Components/button';
+
+//Layouts
+@import './Layouts/header';
+@import  './Layouts/udemyCarousel';
+
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Layouts/services';
+@import'./Layouts/students';
+@import './Layouts/banner';
+@import './Layouts/categories';
+@import './Layouts/feedback';
+@import './Layouts/companies';
+@import './Layouts/footer';
+
+// Page
+//code riêng cho 1 trang cụ thể
+
+
+//Theme
+//dark

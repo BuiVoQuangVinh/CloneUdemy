@@ -1,0 +1,62 @@
+.udemyCarousel {
+    background-image: url("../img/cover.jpg");
+
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 500px;
+    position: relative;
+    .udemyCarousel__content {
+        position: absolute;
+        top: 30%;
+        left: 18%;
+        width: 80%;
+
+     
+        align-items: left;
+        .udemyCarousel__item {
+            width: 460px;
+            h3 {
+                @include styleText($color-white-0, $fs-4, $fw-bold-1);
+            }
+            p {
+                @include styleText($color-white-0, $fs-2 - 2, $fw-normal);
+            }
+            .udemyCarousel__form{
+                input{
+                    border-right: none;
+                }
+                .input-group-text{
+                    border-left: none;
+                    background:$color-white-0;
+                    ::placeholder{
+                        color: red;
+                    }
+                    i{
+                        color: $color-red-0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// REPONSIVE
+@media screen and (max-width: 992px){
+    .udemyCarousel {
+        
+        .udemyCarousel__content {
+        
+            left: 10%;
+            width: 80%;
+    
+         
+        
+            .udemyCarousel__item {
+                width: 350px;
+               
+            }
+        }
+    }
+}

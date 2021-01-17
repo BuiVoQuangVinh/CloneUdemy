@@ -1,0 +1,142 @@
+
+
+.footer__top {
+    width: 80%;
+    margin: 40px auto;
+
+    .footer__link {
+        ul {
+            list-style: none;
+            li {
+                &:focus {
+                    outline: none;
+                }
+                a {
+                    @include styleText($color-blue, $fs-1, $fw-normal);
+                    text-decoration: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .footer__linkSpecial {
+                    @include styleText($color-blue, $fs-1, $fw-bold-1);
+                }
+            }
+        }
+    }
+
+    .dropup {
+        text-align: right;
+        .dropdown-toggle {
+            
+            width: 140px;
+            border: 1px solid $color-gray-4;
+            padding: $pd-1 - 1 $pd-1;
+            // @include styleText($color-black-0,$fs-1,$fw-bold-1) !important;
+       
+
+            @include styleText($color-gray-4, $fs-1, $fw-bold-1);
+            &:hover {
+                border: 1px solid $color-black-0;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            i {
+                text-align: right;
+                margin-right: $mg-1;
+            }
+        }
+        .dropdown-menu {
+            li {
+                a {
+                    text-decoration: none;
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.footer__bottom {
+    border-top:1px solid $color-gray-6 ;
+
+    border-bottom: 6px solid $color-red-0;
+    .footer__bottomContent {
+        width: 90%;
+        margin: 30px auto;
+        .footer__copyRight {
+            display: flex;
+            a {
+                margin-right: 20px;
+                img {
+                    width: 110px;
+                    height: 32px;
+                }
+            }
+            p {
+                line-height: 32px;
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+            }
+        }
+        .footer__linkInline {
+            width: 100%;
+            ul {
+                text-align: right;
+                list-style: none;
+                li {
+                    display: inline;
+                    padding: $pd-0 + 1;
+                    text-decoration: none;
+
+                    a {
+                        line-height: 32px;
+                        text-decoration: none;
+                        @include styleText($color-blue, $fs-1, $fw-normal);
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// REPONSIVE
+
+@media screen and (max-width: 768px){
+    footer{
+        .footer__content{
+           .footer__top{
+               width: 90%;
+           }
+        }
+
+        .footer__bottom{
+            .footer__bottomContent{
+                width: 100%;
+             
+
+
+                .footer__linkInline{
+                    ul{
+                        text-align: left;
+                    }
+                }
+                
+            }
+        }
+    }   
+
+}

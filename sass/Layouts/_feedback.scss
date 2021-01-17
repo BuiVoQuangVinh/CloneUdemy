@@ -1,0 +1,78 @@
+.feedback {
+    background-color: $color-gray-5;
+    .feedback__content {
+       width: 1402px;
+        margin: 0 auto;
+        padding: 32px $pd-1 + 6;
+        .feedback__tab {
+            .feedback__item {
+                height: 260px;
+                padding: 32px;
+                background-color: $color-white-0;
+                border-radius: 3px;
+                box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+                .feedback__info {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: $mg-1 + 8;
+                    .feedback__infoImg {
+                        width: 64px;
+                            height: 64px;
+                        margin-right: $mg-2 - 5;
+                        img {
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                        span {
+                            @include styleText($color-white-0,$fs-0 + 3, $fw-bold-1);
+                            display: block;
+                            width: 100%;
+                            border-radius: 50%;
+                            background-color: rgb(104, 111, 122);
+                           
+                            line-height: 64px;
+                            text-align: center;
+    
+                        }
+                    }
+                    h3 {
+                        @include styleText($color-black-0, $fs-0 + 1, $fw-bold-1);
+                    }
+                }
+
+                .feedback__comment {
+                    @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+                    line-height: 1.5em;
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// REPONSIVE
+@media screen and (max-width: 1440px){
+    .feedback{
+        .feedback__content{
+            width: 1170px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .feedback{
+        .feedback__content{
+            width: 970px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .feedback{
+        .feedback__content{
+            width: 90%;
+        }
+    }
+}

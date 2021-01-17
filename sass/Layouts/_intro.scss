@@ -1,0 +1,57 @@
+.intro {
+    background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    .intro__content {
+        width: 80%;
+        margin: 0 auto;
+        padding: $pd-2 0;
+        .intro__item{
+            .intro__item__icon{
+                @include styleText($color-white-0,50px,$fw-bold);
+                margin-right: $mg-2;
+                align-items: center;
+            }   
+            .intro__item__text{
+                margin: auto 0;
+           
+                h3{
+                    @include styleText($color-white-0,$fs-0 + 2,$fw-bold);
+                    margin-bottom: 0px;
+                
+                }
+                p{
+                    @include styleText($color-white-0,$fs-0 ,$fw-normal);
+                    margin-bottom   :0px;
+                }
+            }
+        }
+
+        .intro__left{
+            text-align: left;
+        }
+        .intro__center{
+            text-align: center;
+        }
+
+        .intro__right{
+            text-align: right;
+        }
+
+
+
+
+
+
+    }
+}
+
+
+// // REPONSIVE
+
+@media screen and (max-width: 1200px){
+    .intro{
+        .intro__content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

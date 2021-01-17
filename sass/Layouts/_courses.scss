@@ -1,0 +1,149 @@
+.courses {
+    margin-top: $mg-2;
+    .courses__content {
+        // width: 80%;
+
+        .row {
+            width: 1400px;
+            margin: 0 auto;
+
+            .courses__selectOf {
+                padding: 0 32px;
+                background-color: rgb(247, 248, 250);
+                width: 100%;
+                margin-bottom: 23px;
+                position: relative;
+
+                .courses__item {
+                    position: absolute;
+                    top: 40%;
+                    padding: 0 $pd-2;
+
+                    h3 {
+                        @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+                    }
+                    p {
+                        @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+                        margin: 0;
+                    }
+                }
+            }
+            .courses__tab {
+                .nav {
+                    justify-content: space-between;
+                    border: none;
+                    padding: 0 40px;
+                    .nav-item {
+                        &:hover {
+                            .nav-link {
+                                border: none;
+                            }
+                        }
+                        .nav-link {
+                            span {
+                                display: inline;
+                            }
+                            @include styleText($color-black-0, $fs-0, $fw-normal);
+                            border: none;
+                            // padding: $pd-1 + 1,$pd-1 + 2;
+                        }
+                        .nav-link.active {
+                            border: none;
+                            border-bottom: 6px solid $color-blue;
+                        }
+                    }
+                }
+
+                .tab-content {
+                    margin: $mg-2;
+                    position: relative;
+                    .courses__list {
+                        .card-title {
+                            @include styleText($color-black-0, $fs-0, $fw-bold);
+                        }
+                        .card-text {
+                            @include styleText($color-gray-4, $fs-1 - 1, $fw-normal);
+                        }
+                        .courses__tab__item__rating {
+                            .courses__tab__item__rating__star {
+                                display: inline;
+                                @include styleText($color-yellow, $fs-1, $fw-normal);
+                                margin: $mg-0;
+                            }
+                            .courses__rating {
+                                @include styleText($color-black-light, $fs-1, $fw-bold);
+                                margin: $mg-0;
+                            }
+
+                            .courses__view {
+                                @include styleText($color-black-0, $fs-1, $fw-normal);
+                            }
+                        }
+                        .courses__tab__item__rating__price {
+                            text-align: right;
+                            .old-price {
+                                @include styleText($color-gray-4, $fs-1, $fw-normal);
+                                text-decoration: line-through;
+                            }
+                            .new-price {
+                                @include styleText($color-black-0, $fs-2 - 2, $fw-bold);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+.courses {
+    .courses__content {
+        @media screen and (max-width: 1440px) {
+            .row {
+                width: 1140px;
+                margin: 0 auto;
+                .courses__tab {
+                    .nav-tabs {
+                        margin: 0;
+                        .nav-item {
+                            a {
+                                padding: 5px;
+                                span {
+                                    display: block !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .row {
+                width: 940px;
+                margin: 0 auto;
+                
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .row {
+                width: 720px;
+                margin: 0 auto;
+               
+            }
+        }
+
+
+        @media screen and (max-width: 768px ) {
+            .row {
+                width: 100%;
+            
+              
+            }
+        }
+
+
+    }
+}
